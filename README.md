@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vatsal Gada — Portfolio
 
-## Getting Started
+## Snapshot
+Hey, I’m Vatsal Gada — a full-stack engineer who loves crafting interactive web experiences that feel intentional, polished, and a little bit magical. This repository powers my public portfolio, showcasing how I think about product design, animation, and the engineering decisions that make high-performing interfaces possible.
 
-First, run the development server:
+## Why This Site Exists
+Recruiters and collaborators often ask for a quick tour of my recent work. Rather than send slide decks, I built a living playground that demonstrates the kind of experiences I enjoy building. Every section here is a conversation starter: the Liquid Ether background explores motion and shader work, the project cards show how I approach micro-interactions, and the writing feed keeps me honest about documenting what I learn.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Highlights at a Glance
+- `Next.js 15` App Router with Turbopack for fast local feedback loops.
+- Scroll-driven layouts using a custom `ScrollStack` component that keeps narrative sections in focus.
+- Interactive cards combining Framer Motion, Three.js, and accessibility-friendly semantics.
+- Tailored theming with Tailwind CSS 4 beta for a glassmorphism-inspired aesthetic without sacrificing performance.
+- Resumé and project metadata sourced from TypeScript modules for easy iteration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Featured Projects
+### Liquid Ether — R3F Background
+A GPU-friendly liquid shader rendered with React Three Fiber. I focused on balancing visual richness with runtime performance, leaning on Framer Motion for subtle oscillations and constraint-based animation controls.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Portfolio — Next.js 15 Experience
+This site itself. I experimented with layered glass panels, animated scroll sections, and a narrative-first layout that adapts cleanly between desktop and mobile. It’s a good example of how I stitch together design systems, accessibility, and interaction design.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> Explore more projects in `content/projects.ts`. Each entry defines copy, tags, and external links, making it simple to expand the showcase without touching layout code.
 
-## Learn More
+## Visual Experiments & Motion
+The `components` directory is where most of the playground lives:
+- `ScrollStack` keeps sections pinned while the story advances.
+- `InteractiveCard` adds hover tilt, lighting, and keyboard support for each project tile.
+- `LiquidEther*` modules manage the Three.js scene and gradient layering for the hero background.
 
-To learn more about Next.js, take a look at the following resources:
+If you enjoy diving into motion design or WebGL, these components give a quick window into how I approach state management, performance, and polish.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Toolkit
+- **Core:** Next.js 15, React 19, TypeScript 5, Tailwind CSS 4.
+- **Motion & 3D:** Framer Motion, React Three Fiber, Drei, custom GLSL shaders.
+- **Tooling:** Turbopack dev server, ESLint 9, pnpm, Vercel (deployment).
+- **Content:** Type-safe metadata modules, Markdown-ready blog routes (under `/app/blog`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Writing & Learning
+The blog section (`/app/blog`) will host ongoing notes on design systems, motion practices, and performance wins. Even when drafts are light, keeping the route live helps me iterate quickly on new ideas.
 
-## Deploy on Vercel
+## Run It Locally
+1. Install dependencies (pnpm is the default):
+   ```bash
+   pnpm install
+   ```
+2. Start the dev server:
+   ```bash
+   pnpm dev
+   ```
+3. Visit `http://localhost:3000` to explore the portfolio.
+4. Customize content:
+   - Update project entries in `content/projects.ts`.
+   - Tweak hero copy and sections in `app/page.tsx`.
+   - Add blog posts under `app/blog` (dynamic routes supported).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Prefer npm, yarn, or bun? Swap the commands above — the project is tool-agnostic.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+The repository is deployment-ready for Vercel. Run `pnpm build` to validate static optimizations locally, then connect the repo to Vercel for zero-config previews and production deployments.
+
+## Connect
+Curious about working together? Email me via the contact section on the site or grab the latest résumé from `public/resume.pdf`. I’m always up for conversations about frontend craft, motion design, and teams that care about the details.
+
+Thanks for taking a look. Let’s build something remarkable.
