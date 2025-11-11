@@ -17,7 +17,7 @@ export function Section({ id, title, subtitle, className, children }: SectionPro
         {(title || subtitle) && (
           <div className="mb-8">
             {subtitle && (
-              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-cyan-300/70">
+              <div className="mb-2 text-xs uppercase tracking-[0.2em] text-indigo-400/70">
                 {subtitle}
               </div>
             )}

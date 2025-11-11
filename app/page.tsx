@@ -10,12 +10,12 @@ export default function Home() {
       <ScrollStack>
         <ScrollStackCard id="hero" cardClassName="p-8 md:p-10">
           <div className="flex flex-col items-start gap-6">
-            <div className="text-xs uppercase tracking-[0.20em] text-cyan-300/80">Vatsal Gada</div>
+            <div className="text-xs uppercase tracking-[0.20em] text-indigo-400/80">Vatsal Gada</div>
             <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white max-w-3xl">
-              Building delightful web experiences with motion, 3D, and craft.
+              Building scalable web applications with precision and purpose.
             </h1>
-            <p className="text-white/70 max-w-2xl">
-              Full‑stack engineer focused on product polish and performance. Currently exploring Liquid Ether visuals and interactive cards.
+            <p className="text-white/70 max-w-2xl leading-relaxed">
+              Full-stack engineer focused on clean architecture, performance, and developer experience. I enjoy turning ideas into production-ready products that are fast, maintainable, and intuitive. Currently building tools that merge AI with web systems for smarter automation.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a href="#projects" className="rounded-md border border-white/15 bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/15">View Projects</a>
@@ -48,7 +48,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-6">
-            <Link href="/blog" className="text-sm text-cyan-300 hover:text-cyan-200">View all posts →</Link>
+            <Link href="/blog" className="text-sm text-indigo-400 hover:text-indigo-300">View all posts →</Link>
           </div>
         </ScrollStackCard>
 
@@ -57,13 +57,15 @@ export default function Home() {
             <div className="relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-white/5">
               <Image src="/next.svg" alt="Portrait placeholder" fill className="object-contain p-6 opacity-80" />
             </div>
-            <div className="text-white/80 leading-relaxed">
+            <div className="text-white/80 leading-relaxed space-y-4">
               <p>
-                I’m a developer who enjoys building high‑quality frontends with a focus on
-                smooth interactions and accessibility. I love working across the stack when needed, with an eye for product detail.
+                I&apos;m a full-stack engineer with experience building web products that are fast, reliable, and thoughtfully designed. I enjoy solving complex problems, simplifying workflows, and collaborating across design and product teams to ship impactful features.
               </p>
-              <p className="mt-4">
-                Tech I like: Next.js, TypeScript, Tailwind, Framer Motion, R3F/Three.js.
+              <p>
+                My experience spans startups and enterprise environments—leading teams, architecting SaaS solutions, and integrating AI into production systems. I&apos;m passionate about product polish, performance, and building software that scales gracefully.
+              </p>
+              <p>
+                <span className="font-medium text-white">Tech I work with:</span> React, Next.js, TypeScript, Tailwind, Flask, FastAPI, Node.js, Supabase, Prisma, PostgreSQL, Python.
               </p>
             </div>
           </div>
@@ -71,10 +73,20 @@ export default function Home() {
 
         <ScrollStackCard id="contact" title="Contact">
           <div className="flex flex-col gap-4">
-            <p className="text-white/80">Want to collaborate or say hi? I’m open to interesting opportunities.</p>
-            <a href="mailto:vatsal@example.com" className="inline-flex w-fit rounded-md border border-white/15 bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/15">
-              Email me
-            </a>
+            <p className="text-white/80 leading-relaxed">
+              I&apos;m always open to connecting with teams working on meaningful, high-impact products.
+            </p>
+            <div className="flex flex-col gap-3">
+              <a href="mailto:contactvgada@gmail.com" className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-indigo-400 transition-colors">
+                <span className="text-indigo-400">📧</span> contactvgada@gmail.com
+              </a>
+              <a href="https://linkedin.com/in/vatsalgada" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-indigo-400 transition-colors">
+                <span className="text-indigo-400">💼</span> linkedin.com/in/vatsalgada
+              </a>
+              <a href="https://github.com/vatsalgada" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-indigo-400 transition-colors">
+                <span className="text-indigo-400">🧑‍💻</span> github.com/vatsalgada
+              </a>
+            </div>
           </div>
         </ScrollStackCard>
       </ScrollStack>

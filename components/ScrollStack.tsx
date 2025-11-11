@@ -31,7 +31,6 @@ function StackCardInternal({ id, title, subtitle, className, cardClassName, chil
 
   const y = useTransform(scrollYProgress, [0, 1], [0, -40]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.96]);
-  const shadowOpacity = useTransform(scrollYProgress, [0, 1], [0.25, 0.35]);
 
   return (
     <section id={id} ref={sectionRef} className={clsx("h-[200vh] md:h-[200vh]", className)}>
@@ -62,7 +61,7 @@ function StackCardInternal({ id, title, subtitle, className, cardClassName, chil
           {(title || subtitle) && (
             <div className="mb-6">
               {subtitle && (
-                <div className="mb-2 text-xs uppercase tracking-[0.2em] text-cyan-300/70">{subtitle}</div>
+                <div className="mb-2 text-xs uppercase tracking-[0.2em] text-indigo-400/70">{subtitle}</div>
               )}
               {title && (
                 <h2 id={`${id}-title`} className="text-2xl md:text-3xl font-semibold tracking-tight text-white">{title}</h2>

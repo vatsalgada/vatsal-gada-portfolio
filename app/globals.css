@@ -3,7 +3,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --accent-cyan: #22d3ee;
+  --accent-indigo: #6366F1;
   --accent-pink: #d946ef;
   --accent-blue: #60a5fa;
   --radius-lg: 0.75rem;

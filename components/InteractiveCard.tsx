@@ -15,7 +15,7 @@ type InteractiveCardProps = PropsWithChildren<{
   media?: React.ReactNode;
 }>;
 
-export function InteractiveCard({ as = "div", href, title, eyebrow, accentColor = "#22d3ee", className, media, children }: InteractiveCardProps) {
+export function InteractiveCard({ as = "div", href, title, eyebrow, accentColor = "#6366F1", className, media, children }: InteractiveCardProps) {
   const prefersReducedMotion = useReducedMotion();
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
@@ -39,7 +39,7 @@ export function InteractiveCard({ as = "div", href, title, eyebrow, accentColor 
     y.set(0.5);
   }, [x, y]);
 
-  const Wrapper = as === "a" && href ? Link : ("div" as any);
+  const Wrapper = (as === "a" && href ? Link : "div") as React.ElementType;
 
   return (
     <motion.div
@@ -67,7 +67,7 @@ export function InteractiveCard({ as = "div", href, title, eyebrow, accentColor 
         )}
         <div className="flex flex-col">
           {eyebrow && (
-            <div className="text-[10px] uppercase tracking-[0.2em] text-cyan-300/80">
+            <div className="text-[10px] uppercase tracking-[0.2em] text-indigo-400/80">
               {eyebrow}
             </div>
           )}
@@ -81,8 +81,8 @@ export function InteractiveCard({ as = "div", href, title, eyebrow, accentColor 
           {children}
         </div>
         {href && (
-          <Wrapper href={href} className="mt-2 inline-flex items-center text-sm text-cyan-300 hover:text-cyan-200">
-            Visit →
+          <Wrapper href={href} className="mt-2 inline-flex items-center text-sm text-indigo-400 hover:text-indigo-300">
+            View Project →
           </Wrapper>
         )}
       </div>
